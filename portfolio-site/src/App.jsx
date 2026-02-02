@@ -10,6 +10,8 @@ import Skills from "./components/Skills";
 import EducationCerts from "./components/EducationCerts";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Experience from "./components/Experience";
+
 
 // Assets to preload
 import heroImg from "./assets/final.png";
@@ -47,6 +49,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <Experience />
       <Skills />
       <EducationCerts />
       <Contact />
