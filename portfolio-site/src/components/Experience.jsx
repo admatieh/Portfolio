@@ -12,8 +12,31 @@ const stickers = [
   { src: solutions, alt: "solutions", x: "55%", y: "50%", r: 14 },
 ];
 
-
 const items = [
+  {
+    role: "Full Stack Developer",
+    type: "Internship",
+    location: "Lebanon (On-site , The Digital Hub)",
+    date: "Jan 2026 — Present",
+    highlights: [
+      "Built full-stack features using the MERN stack (React, Node.js, MongoDB).",
+      "Integrated REST APIs with focus on authentication and error handling.",
+      "Collaborated in team workflow: pull requests, code reviews, standups.",
+    ],
+    tags: ["React", "Node.js", "MongoDB", "REST APIs", "Git", "Teamwork"],
+  },
+  {
+    role: "Bug Bounty / Web Security Trainee",
+    type: "Training",
+    location: "Lebanon (Hybrid)",
+    date: "2025 — Present",
+    highlights: [
+      "Completed extensive PortSwigger Web Security Academy labs.",
+      "Practiced finding and exploiting common web vulnerabilities (XSS, injection).",
+      "Built small security scripts/tools for testing and automation (Python/Flask).",
+    ],
+    tags: ["Web Security", "PortSwigger", "XSS", "Injection", "Python", "Flask"],
+  },
   {
     role: "Software Developer & Automation Engineer",
     type: "Freelance",

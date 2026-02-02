@@ -118,13 +118,26 @@ const Hero = () => {
               <div className="mt-6 border-l border-white/20 pl-4">
                 <ul className="space-y-6 text-sm text-white/90">
                   <li><span className="font-semibold text-[#E0E0E0]">XRWorkout</span><span className="text-white/70">: automation + growth systems</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Digital Hub</span><span className="text-white/70">: MERN teamwork + PR workflow</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admin</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admin</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admin</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admin</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admin</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admin</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
+                  <li><span className="font-semibold text-[#E0E0E0]">Network Admininstration</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
+                  <li>
+                    <span className="font-semibold text-[#E0E0E0]">The Digital Hub</span>
+                    <span className="text-white/70">: MERN full-stack (React/Node), PR workflow + code reviews</span>
+                  </li>
+
+                  <li>
+                    <span className="font-semibold text-[#E0E0E0]">Semicolon Security</span>
+                    <span className="text-white/70">: Bug bounty training — PortSwigger labs, XSS/injection practice</span>
+                  </li>
+
+                  <li>
+                    <span className="font-semibold text-[#E0E0E0]">Freelance</span>
+                    <span className="text-white/70">: Built POS/pharmacy systems, Java/MySQL/Node, workflow automation</span>
+                  </li>
+
+                  <li>
+                    <span className="font-semibold text-[#E0E0E0]">Sibline</span>
+                    <span className="text-white/70">: IT Instructor — networking & security basics (DNS/DHCP, firewalls)</span>
+                  </li>
 
                 </ul>
               </div>

@@ -14,12 +14,13 @@ const education = {
 const certs = [
   { title: "Introduction to CyberSecurity", issuer: "Cisco", icon: cicsoIcon },
   { title: "CCNA Routing & Switching (CCNA)", issuer: "Cisco", icon: cicsoIcon },
+  { title: "Network Administration", issuer: "University", icon: null },
   { title: "CCNA Security", issuer: "Cisco", icon: cicsoIcon },
   { title: "Junior Cybersecurity Analyst Path", issuer: "Cisco", icon: cicsoIcon },
-  { title: "Scientific Computing with Python", issuer: "Semicolon", icon: udemyIcon },
-  { title: "Scientific Computing with Python", issuer: "Semicolon", icon: semicolonIcon },
-  { title: "Scientific Computing with Python", issuer: "Semicolon", icon: semicolonIcon },
-  { title: "Scientific Computing with Python", issuer: "Semicolon", icon: semicolonIcon },
+  { title: "Scientific Computing with Python", issuer: "Udemy", icon: udemyIcon },
+  { title: "Web Professional", issuer: "Semicolon", icon: semicolonIcon },
+  { title: "Ethical Hacking 101", issuer: "Semicolon", icon: semicolonIcon },
+  { title: "Bug Bounty Secrets", issuer: "Semicolon", icon: semicolonIcon },
 ];
 
 const EducationCerts = () => {

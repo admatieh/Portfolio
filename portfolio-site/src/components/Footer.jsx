@@ -30,7 +30,7 @@ const Footer = () => {
                   About
                 </a>
                 <a href="#experience" className="hover:text-black transition">
-                  Experience
+                  Work
                 </a>
                 <a href="#skills" className="hover:text-black transition">
                   Skills
@@ -46,7 +46,7 @@ const Footer = () => {
               {/* Socials */}
               <div className="flex items-center justify-center gap-3">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/AdamAtiehh/"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-black/10 bg-black/5 p-3 text-black/70 hover:text-black hover:border-black/20 transition"
@@ -56,7 +56,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/adam-abo-atyeh/"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-black/10 bg-black/5 p-3 text-black/70 hover:text-black hover:border-black/20 transition"
@@ -66,7 +66,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/adam.atyeh/"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-black/10 bg-black/5 p-3 text-black/70 hover:text-black hover:border-black/20 transition"

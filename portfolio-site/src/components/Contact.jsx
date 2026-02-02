@@ -1,5 +1,14 @@
 import { useState } from "react";
 import { Mail, MapPin, Phone, Download, Linkedin, Github, Instagram } from "lucide-react";
+import cvPdf from "../assets/Adam_Atieh_CV.pdf";
+
+
+  const Field = ({ label, children }) => (
+    <label className="block">
+      <span className="sr-only">{label}</span>
+      {children}
+    </label>
+  );
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -19,7 +28,7 @@ const Contact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const to = "YOUR_EMAIL_HERE@gmail.com";
+    const to = "admatieh@gmail.com";
     const subject = encodeURIComponent(form.subject || "Portfolio Contact");
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nMessage:\n${form.message}`
@@ -28,12 +37,7 @@ const Contact = () => {
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
   };
 
-  const Field = ({ label, children }) => (
-    <label className="block">
-      <span className="sr-only">{label}</span>
-      {children}
-    </label>
-  );
+
 
   const inputBase =
     "w-full rounded-sm border border-white/80  px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none focus:border-white/10 focus:ring-2 focus:ring-white/20 ";
@@ -74,10 +78,10 @@ const Contact = () => {
                 <div>
                   <p className="text-sm font-semibold">Email</p>
                   <a
-                    href="mailto:YOUR_EMAIL_HERE@gmail.com"
+                    href="mailto:admatieh@gmail.com"
                     className="mt-1 block text-sm text-white/65 hover:text-white text-[#E0E0E0]"
                   >
-                    YOUR_EMAIL_HERE@gmail.com
+                    admatieh@gmail.com
                   </a>
                 </div>
               </div>
@@ -89,10 +93,10 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-[#E0E0E0] font-semibold">Phone</p>
                   <a
-                    href="tel:+96100000000"
+                    href="tel:+96170826037"
                     className="mt-1 block text-sm text-white/65 hover:text-white"
                   >
-                    +961 XX XXX XXX
+                    +961 70826037
                   </a>
                 </div>
               </div>
@@ -101,22 +105,19 @@ const Contact = () => {
             {/* Download CV */}
             <div className="mt-10">
               <a
-                href="/Adam_Atieh_CV.pdf"
+                href={cvPdf}
                 download
                 className="inline-flex items-center gap-2 rounded-md border border-white/80 px-6 py-3 text-sm font-semibold text-[#E0E0E0] hover:bg-white/10 transition"
               >
                 <Download className="h-4 w-4" />
                 Download CV
               </a>
-              <p className="mt-3 text-xs text-white/45">
-                Put your PDF in <span className="text-white/70">/public</span> as <span className="text-white/70">Adam_Atieh_CV.pdf</span>.
-              </p>
             </div>
 
             {/* Socials */}
             <div className="mt-10 flex items-center gap-4">
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/adam-abo-atyeh"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 hover:text-white hover:border-white/20 transition"
@@ -126,7 +127,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/AdamAtiehh"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 hover:text-white hover:border-white/20 transition"
@@ -136,7 +137,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/adam.atyeh"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 hover:text-white hover:border-white/20 transition"
