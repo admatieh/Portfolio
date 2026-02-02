@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.6fr_1fr] lg:items-start">
             {/* LEFT: Image panel */}
-            <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black rounded-l-2xl rounded-r-[999px]">
+            <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black rounded-2xl lg:rounded-l-2xl lg:rounded-r-[999px]">
               <div
                 className="
                   relative min-h-[340px] sm:min-h-[420px]

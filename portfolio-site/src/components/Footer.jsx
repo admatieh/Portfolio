@@ -88,7 +88,7 @@ const Footer = () => {
       {/* Back to top button */}
       <a
         href="#top"
-        className="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#4C8DFF] text-black shadow-lg hover:brightness-110 transition"
+        className="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-lg hover:brightness-110 transition"
         aria-label="Back to top"
       >
         <ArrowUp className="h-5 w-5" />

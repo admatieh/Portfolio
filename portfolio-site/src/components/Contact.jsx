@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-[#070707] text-white">
-      <div className="mx-auto w-full px-6 py-20">
+      <div className="mx-auto max-w-7xl w-full px-6 py-20">
         {/* Title */}
             <div>
             <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
@@ -55,7 +55,7 @@ const Contact = () => {
           </div>
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-start ">
           {/* LEFT: info */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 sm:p-10">
+          <div className=" border border-white/10 bg-white/5 p-8 sm:p-10">
             <div className="space-y-7">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4C8DFF]/15 ring-1 ring-[#4C8DFF]/25">

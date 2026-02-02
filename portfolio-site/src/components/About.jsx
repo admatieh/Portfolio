@@ -16,7 +16,7 @@ const stickers = [
 const About = () => {
   return (
     <section id="about" className="bg-[#070707] text-white">
-      <div className="mx-auto w-full  px-6 py-20">
+      <div className="mx-auto w-full max-w-7xl px-6 py-20">
         {/* Small label */}
         <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
           ABOUT

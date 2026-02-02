@@ -52,7 +52,7 @@ const Bar = ({ name, level }) => {
 const Skills = () => {
   return (
     <section id="skills" className="bg-[#070707] text-white">
-      <div className="mx-auto w-full px-6 py-20">
+      <div className="mx-auto w-full max-w-7xl px-6 py-20">
         {/* Header */}
           <div>
             <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
