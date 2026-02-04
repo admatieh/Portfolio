@@ -1,15 +1,13 @@
-import muscle from "../assets/muscle.png";
-import automation from "../assets/automation.png";
-import engineering from "../assets/engineering.png";
-import health from "../assets/healthcare.png";
-import solutions from "../assets/problem-solving.png";
+import muscle from "../assets/backend.png";
+import automation from "../assets/automation2.png";
+import engineering from "../assets/bug.png";
+import health from "../assets/full-stack.png";
 
 const stickers = [
   { src: muscle, alt: "muscle", x: "30%",  y: "18%", r: -8 },
   { src: automation,  alt: "automation", x: "80%", y: "16%", r: 10 },
   { src: engineering,  alt: "engineering", x: "20%", y: "72%", r: 6 },
   { src: health, alt: "health", x: "78%", y: "78%", r: -6 },
-  { src: solutions, alt: "solutions", x: "55%", y: "50%", r: 14 },
 ];
 
 const items = [

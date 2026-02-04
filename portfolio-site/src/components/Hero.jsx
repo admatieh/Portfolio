@@ -39,7 +39,7 @@ const Hero = () => {
 
           <div className="grid gap-6 border-t border-white/15 pt-6 lg:grid-cols-[1fr_1fr_auto] lg:items-start">
             <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
-              I build web apps with React + Node.js, focused on clean UI, solid architecture,
+              I build web apps with React + Python, focused on clean UI, solid architecture,
               and maintainable code.
             </p>
 
@@ -117,8 +117,14 @@ const Hero = () => {
 
               <div className="mt-6 border-l border-white/20 pl-4">
                 <ul className="space-y-6 text-sm text-white/90">
-                  <li><span className="font-semibold text-[#E0E0E0]">XRWorkout</span><span className="text-white/70">: automation + growth systems</span></li>
-                  <li><span className="font-semibold text-[#E0E0E0]">Network Admininstration</span><span className="text-white/70">: AD, DNS/DHCP labs</span></li>
+                  <li>
+                    <span className="font-semibold text-[#E0E0E0]">XRWorkout</span>
+                    <span className="text-white/70">: Multiple AI integrations and vibe-coded websites with dynamic aesthetics</span>
+                  </li>
+                  <li>
+                    <span className="font-semibold text-[#E0E0E0]">Network Admininstration</span>
+                    <span className="text-white/70">: Active Directory, DNS/DHCP configuration and management + security</span>
+                  </li>
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">The Digital Hub</span>
                     <span className="text-white/70">: MERN full-stack (React/Node), PR workflow + code reviews</span>

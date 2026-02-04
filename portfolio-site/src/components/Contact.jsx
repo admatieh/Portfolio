@@ -2,6 +2,17 @@ import { useState } from "react";
 import { Mail, MapPin, Phone, Download, Linkedin, Github, Instagram } from "lucide-react";
 import cvPdf from "../assets/Adam_Atieh_CV.pdf";
 
+import muscle from "../assets/map.png";
+import automation from "../assets/gmail.png";
+import engineering from "../assets/phone.png";
+import call from "../assets/removed.png";
+
+
+const stickers = [
+  { src: muscle, alt: "muscle", x: "80%",  y: "10%", r: -8 },
+  { src: automation,  alt: "automation", x: "80%", y: "36%", r: 10 },
+  { src: engineering,  alt: "engineering", x: "80%", y: "62%", r: 6 },
+];
 
   const Field = ({ label, children }) => (
     <label className="block">
@@ -59,27 +70,29 @@ const Contact = () => {
           </div>
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-start ">
           {/* LEFT: info */}
-          <div className=" border border-white/10 bg-white/5 p-8 sm:p-10">
-            <div className="space-y-7">
+          <div className=" border border-white/10 bg-white p-8 sm:p-10 relative min-h-[340px] sm:min-h-[210px]
+                  bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
+                  bg-[size:48px_48px] rounded-md">
+            <div className="space-y-7 rounded-md">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4C8DFF]/15 ring-1 ring-[#4C8DFF]/25">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 ring-1 ring-[#4C8DFF]/25">
                   <MapPin className="h-5 w-5 " />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[#E0E0E0]">Location</p>
-                  <p className="mt-1 text-sm text-white/65">Lebanon</p>
+                  <p className="text-sm font-semibold text-black">Location</p>
+                  <p className="mt-1 text-sm text-black/65">Lebanon</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4C8DFF]/15 ring-1 ring-[#4C8DFF]/25">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 ring-1 ring-[#4C8DFF]/25">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold">Email</p>
+                  <p className="text-sm font-semibold text-black">Email</p>
                   <a
                     href="mailto:admatieh@gmail.com"
-                    className="mt-1 block text-sm text-white/65 hover:text-white text-[#E0E0E0]"
+                    className="mt-1 block text-sm text-black/65 hover:text-blue-800 "
                   >
                     admatieh@gmail.com
                   </a>
@@ -87,19 +100,38 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4C8DFF]/15 ring-1 ring-[#4C8DFF]/25">
-                  <Phone className="h-5 w-5 " />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 ring-1 ring-[#4C8DFF]/25">
+                  <Phone className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-[#E0E0E0] font-semibold">Phone</p>
+                  <p className="text-sm text-black font-semibold">Phone</p>
                   <a
                     href="tel:+96170826037"
-                    className="mt-1 block text-sm text-white/65 hover:text-white"
+                    className="mt-1 block text-sm text-black/65 hover:text-blue-800"
                   >
                     +961 70826037
                   </a>
                 </div>
               </div>
+                {/* Stickers */}
+                {stickers.map((s) => (
+                  <img
+                    key={s.alt}
+                    src={s.src}
+                    alt={s.alt}
+                    className="
+                      absolute z-20
+                      h-14 w-14 sm:h-16 sm:w-16
+                      drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)]
+                      select-none
+                    "
+                    style={{
+                      left: s.x,
+                      top: s.y,
+                      transform: `translate(-50%, -50%) rotate(${s.r}deg)`,
+                    }}
+                  />
+                ))}
             </div>
 
             {/* Download CV */}
@@ -107,12 +139,14 @@ const Contact = () => {
               <a
                 href={cvPdf}
                 download
-                className="inline-flex items-center gap-2 rounded-md border border-white/80 px-6 py-3 text-sm font-semibold text-[#E0E0E0] hover:bg-white/10 transition"
+                className="inline-flex items-center bg-blue-500 gap-2 rounded-md border border-white/80 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-900 transition"
               >
                 <Download className="h-4 w-4" />
                 Download CV
               </a>
             </div>
+
+
 
             {/* Socials */}
             <div className="mt-10 flex items-center gap-4">
@@ -120,7 +154,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/adam-abo-atyeh"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 hover:text-white hover:border-white/20 transition"
+                className="rounded-full border border-white/10 bg-blue-500 p-3 text-white hover:text-white hover:border-white/20 transition"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -130,7 +164,7 @@ const Contact = () => {
                 href="https://github.com/AdamAtiehh"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 hover:text-white hover:border-white/20 transition"
+                className="rounded-full border border-white/10 bg-blue-500 p-3 text-white hover:text-white hover:border-white/20 transition"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -140,7 +174,7 @@ const Contact = () => {
                 href="https://www.instagram.com/adam.atyeh"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 hover:text-white hover:border-white/20 transition"
+                className="rounded-full border border-white/10 bg-blue-500 p-3 text-white hover:text-white hover:border-white/20 transition"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />

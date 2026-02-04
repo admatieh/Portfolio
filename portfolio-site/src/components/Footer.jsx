@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               {/* Brand */}
               <a href="#top" className="text-xl font-black tracking-tight">
-                Adam<span className="text-violet-500">Atieh</span>
+                Adam<span className="text-blue-500">Atieh</span>
               </a>
 
               {/* Links */}
@@ -48,7 +48,7 @@ const Footer = () => {
                   href="https://github.com/AdamAtiehh/"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-black/10 bg-black/5 p-3 text-black/70 hover:text-black hover:border-black/20 transition"
+                  className="rounded-full border border-black/10 bg-blue-500 p-3 text-white hover:text-black hover:border-black/20 transition"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
@@ -58,7 +58,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/adam-abo-atyeh/"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-black/10 bg-black/5 p-3 text-black/70 hover:text-black hover:border-black/20 transition"
+                  className="rounded-full border border-black/10 bg-blue-500 p-3 text-white hover:text-black hover:border-black/20 transition"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -68,7 +68,7 @@ const Footer = () => {
                   href="https://www.instagram.com/adam.atyeh/"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-black/10 bg-black/5 p-3 text-black/70 hover:text-black hover:border-black/20 transition"
+                  className="rounded-full border border-black/10 bg-blue-500 p-3 text-white hover:text-black hover:border-black/20 transition"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
