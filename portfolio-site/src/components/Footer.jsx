@@ -1,7 +1,6 @@
 import { Github, Linkedin, Instagram, ArrowUp } from "lucide-react";
 
 const Footer = () => {
-  const year = new Date().getFullYear();
 
   return (
     <footer id="footer" className="bg-transparent">
@@ -79,7 +78,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="mt-8 text-center text-sm text-black/70">
-              © {year} Adam Atieh. All Rights Reserved.
+              © 2026 Adam Atieh. All Rights Reserved.
             </div>
           </div>
         </div>

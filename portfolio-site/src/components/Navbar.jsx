@@ -16,7 +16,6 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-[#070707] text-[#E0E0E0]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        {/* Brand */}
         <a href="#top" className="flex items-center gap-3" onClick={closeMenu}>
           <span className="block h-8 w-14 rounded-l-lg rounded-r-full bg-[#E0E0E0]" />
           <span className="flex">

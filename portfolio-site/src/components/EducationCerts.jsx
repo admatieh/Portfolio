@@ -8,7 +8,6 @@ const education = {
   school: "Lebanese International University",
   location: "Lebanon",
   year: "2024",
-  // icon: capIcon, // optional later
 };
 
 const certs = [
@@ -40,7 +39,7 @@ const EducationCerts = () => {
     className="
       relative min-h-[240px] sm:min-h-[210px]
       bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
-      bg-[size:32px_32px] sm:bg-[size:48px_48px]
+      bg-[size:32px_32px] sm:bg-[size:48px_48px] 
     "
   >
     <p className="text-xs font-semibold tracking-[0.18em] text-black/60">

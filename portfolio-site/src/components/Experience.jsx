@@ -86,7 +86,6 @@ const Experience = () => {
           </div>
         </div>
 
-        {/* Timeline layout */}
         <div className="mt-10 grid gap-10 lg:grid-cols-[240px_1fr]">
           {/* Left rail */}
           <div className="hidden lg:block">
@@ -123,9 +122,6 @@ const Experience = () => {
 
                 </div> 
               </div>
-            
-
-
               </div>
             </div>
           </div>
@@ -137,7 +133,6 @@ const Experience = () => {
                 key={it.role + it.date}
                 className="relative overflow-hidden  border border-white/10 bg-black/40 p-8 sm:p-10 text-[#E0E0E0]"
               >
-                {/* subtle accent stripe */}
                 <div className="absolute left-0 top-0 h-full w-1 bg-white/15" />
                 <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
 
