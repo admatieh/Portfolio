@@ -5,11 +5,11 @@ import health from "../assets/healthcare.png";
 import solutions from "../assets/problem-solving.png";
 
 const stickers = [
-  { src: muscle, alt: "muscle", x: "30%",  y: "18%", r: -8 },
-  { src: automation,  alt: "automation", x: "80%", y: "16%", r: 10 },
-  { src: engineering,  alt: "engineering", x: "20%", y: "72%", r: 6 },
+  { src: muscle, alt: "muscle", x: "40%", y: "28%", r: -8 },
+  { src: automation, alt: "automation", x: "80%", y: "26%", r: 10 },
+  { src: engineering, alt: "engineering", x: "20%", y: "72%", r: 6 },
   { src: health, alt: "health", x: "78%", y: "78%", r: -6 },
-  { src: solutions, alt: "solutions", x: "55%", y: "50%", r: 14 },
+  { src: solutions, alt: "solutions", x: "55%", y: "60%", r: 14 },
 ];
 
 
@@ -31,7 +31,7 @@ const About = () => {
         </div>
 
         {/* Two panels */}
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+        <div className="mt-12 grid gap-0 lg:grid-cols-2">
           {/* Left panel */}
           <div className="border border-white/12 p-10 sm:p-12">
             <h3 className="text-lg font-semibold tracking-tight text-[#E0E0E0]">SHORT BIO</h3>
@@ -45,73 +45,73 @@ const About = () => {
               security testing through projects and internships.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-4">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
                 <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">2+</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
-                Years Learning
+                  Years Learning
                 </div>
-            </div>
+              </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
                 <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">10+</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
-                Projects
+                  Projects
                 </div>
-            </div>
+              </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
                 <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">3</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
-                Internships / Training
+                  Internships / Training
                 </div>
-            </div>
+              </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
                 <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">5+</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
-                Tech Areas
+                  Tech Areas
                 </div>
-            </div>
+              </div>
             </div>
 
-            
+
           </div>
-          
+
 
           {/* Right panel */}
-          <div className="border border-white p-10 sm:p-12">
-            <h3 className="text-lg font-semibold tracking-tight text-[#E0E0E0]">WHAT I CARE ABOUT</h3>
-            <p className="mt-6 text-sm leading-relaxed text-white/75">
-              I like building systems that are easy to reason about: clear components,
-              predictable data flow, and good defaults. I prefer solutions that stay stable
-              as the project grows.
-            </p>
+          <div className="
+            relative bg-[#F3F1EC] text-black border border-black/5 p-10 sm:p-12
+            bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
+            bg-[size:48px_48px]
+            overflow-hidden rounded-b-[200px] lg:rounded-r-full lg:rounded-bl-none
+          ">
+            <div className="relative z-10">
+              <h3 className="text-lg font-semibold tracking-tight text-black">WHAT I CARE ABOUT</h3>
+              <p className="mt-6 text-sm leading-relaxed text-black/70">
+                I like building systems that are easy to reason about: clear components,
+                predictable data flow, and good defaults. I prefer solutions that stay stable
+                as the project grows.
+              </p>
 
-            <ul className="mt-6 space-y-3 text-sm text-white/75">
-              <li>
-                <span className="text-[#E0E0E0] font-semibold">Engineering:</span>{" "}
-                clean architecture, maintainable code
-              </li>
-              <li>
-                <span className="text-[#E0E0E0] font-semibold">Automation:</span>{" "}
-                workflows that remove manual work
-              </li>
-              <li>
-                <span className="text-[#E0E0E0] font-semibold">Security basics:</span>{" "}
-                safer defaults, input validation, testing mindset
-              </li>
-            </ul>
-            <br />
-             <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black ">
-              <div
-                className="
-                  relative min-h-[340px] sm:min-h-[210px]
-                  bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
-                  bg-[size:48px_48px]
-                "
-              >
+              <ul className="mt-6 space-y-3 text-sm text-black/70">
+                <li>
+                  <span className="text-black font-semibold">Engineering:</span>{" "}
+                  clean architecture, maintainable code
+                </li>
+                <li>
+                  <span className="text-black font-semibold">Automation:</span>{" "}
+                  workflows that remove manual work
+                </li>
+                <li>
+                  <span className="text-black font-semibold">Security basics:</span>{" "}
+                  safer defaults, input validation, testing mindset
+                </li>
+              </ul>
+            </div>
 
-                {/* Stickers */}
+            {/* Stickers Area */}
+            <div className="mt-10 overflow-visible rounded-sm">
+              <div className="relative min-h-[220px] sm:min-h-[200px]">
                 {stickers.map((s) => (
                   <img
                     key={s.alt}
@@ -130,10 +130,8 @@ const About = () => {
                     }}
                   />
                 ))}
-
-                </div> 
               </div>
-            
+            </div>
           </div>
         </div>
       </div>
