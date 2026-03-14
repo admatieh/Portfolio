@@ -4,9 +4,9 @@ import engineering from "../assets/bug.png";
 import health from "../assets/full-stack.png";
 
 const stickers = [
-  { src: muscle, alt: "muscle", x: "30%",  y: "18%", r: -8 },
-  { src: automation,  alt: "automation", x: "80%", y: "16%", r: 10 },
-  { src: engineering,  alt: "engineering", x: "20%", y: "72%", r: 6 },
+  { src: muscle, alt: "muscle", x: "30%", y: "18%", r: -8 },
+  { src: automation, alt: "automation", x: "80%", y: "16%", r: 10 },
+  { src: engineering, alt: "engineering", x: "20%", y: "72%", r: 6 },
   { src: health, alt: "health", x: "78%", y: "78%", r: -6 },
 ];
 
@@ -24,9 +24,22 @@ const items = [
     tags: ["React", "Node.js", "MongoDB", "REST APIs", "Git", "Teamwork"],
   },
   {
+    role: "Software & Operations Intern",
+    type: "Internship",
+    location: "Remote, XR-WORKOUT",
+    date: "Nov 2025 — Feb 2026",
+    highlights: [
+      "Contributed to software development tasks across frontend and backend features",
+      "Assisted in testing, debugging, and improving application performance",
+      "Collaborated with supervisor and team members to deliver feature updates and internal improvements",
+      "Participated in onboarding, planning sessions, and technical discussions",
+    ],
+    tags: ["Remote Collaboration", "Software Testing", "Software Development", "Project Planning", "Operation Support"],
+  },
+  {
     role: "Bug Bounty / Web Security Trainee",
     type: "Training",
-    location: "Lebanon (Hybrid)",
+    location: "Lebanon (Hybrid), Semicolon Security",
     date: "2025 — Present",
     highlights: [
       "Completed extensive PortSwigger Web Security Academy labs.",
@@ -72,10 +85,10 @@ const Experience = () => {
               EXPERIENCE
             </p>
             <div className="mt-4 flex items-end gap-6">
-            <div className="h-14 w-2 bg-[#E0E0E0]" />
-            <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
+              <div className="h-14 w-2 bg-[#E0E0E0]" />
+              <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
                 WHAT I'VE BUILT
-            </h2>
+              </h2>
             </div>
           </div>
 
@@ -89,37 +102,37 @@ const Experience = () => {
           <div className="hidden lg:block">
             <div className="sticky top-24">
               <div className="rounded-md border border-white/10 bg-white/5 p-1">
-                             <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black rounded-md">
-              <div
-                className="
+                <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black rounded-md">
+                  <div
+                    className="
                   relative min-h-[340px] sm:min-h-[210px]
                   bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
                   bg-[size:48px_48px]
                 "
-              >
+                  >
 
-                {/* Stickers */}
-                {stickers.map((s) => (
-                  <img
-                    key={s.alt}
-                    src={s.src}
-                    alt={s.alt}
-                    className="
+                    {/* Stickers */}
+                    {stickers.map((s) => (
+                      <img
+                        key={s.alt}
+                        src={s.src}
+                        alt={s.alt}
+                        className="
                       absolute z-20
                       h-14 w-14 sm:h-16 sm:w-16
                       drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)]
                       select-none
                     "
-                    style={{
-                      left: s.x,
-                      top: s.y,
-                      transform: `translate(-50%, -50%) rotate(${s.r}deg)`,
-                    }}
-                  />
-                ))}
+                        style={{
+                          left: s.x,
+                          top: s.y,
+                          transform: `translate(-50%, -50%) rotate(${s.r}deg)`,
+                        }}
+                      />
+                    ))}
 
-                </div> 
-              </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
