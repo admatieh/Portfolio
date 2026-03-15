@@ -45,7 +45,7 @@ const Footer = () => {
               {/* Socials */}
               <div className="flex items-center justify-center gap-3">
                 <a
-                  href="https://github.com/AdamAtiehh/"
+                  href="https://github.com/admatieh/"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-black/10 bg-blue-500 p-3 text-white hover:text-black hover:border-black/20 transition"
