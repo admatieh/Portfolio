@@ -36,13 +36,14 @@ const About = () => {
           <div className="border border-white/12 p-10 sm:p-12">
             <h3 className="text-lg font-semibold tracking-tight text-[#E0E0E0]">SHORT BIO</h3>
             <p className="mt-6 text-sm leading-relaxed text-white/75">
-              I’m Adam — a Computer Science student focused on building clean, practical
-              web applications. I work mainly with React and Node.js, and I care about
-              structure, maintainability, and shipping things that work.
+              I’m Adam — a software engineer with hands-on experience building APIs, 
+              automation tools, and full-stack applications. I focus on developing 
+              reliable backend logic, efficient software solutions, and security-aware
+              applications using Python, JavaScript, and modern web technologies.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-white/75">
-              Recently, I’ve been combining full-stack development with automation and basic
-              security testing through projects and internships.
+              I enjoy work where architecture and performance matter — shipping
+              features that are both stable and maintainable from the start.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">

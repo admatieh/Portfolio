@@ -12,16 +12,17 @@ const stickers = [
 
 const items = [
   {
-    role: "Full Stack Developer",
+    role: "Full-Stack Developer Intern",
     type: "Internship",
-    location: "Lebanon (On-site , The Digital Hub)",
+    location: "Lebanon | Hybrid (The Digital Hub)",
     date: "Jan 2026 — Present",
     highlights: [
-      "Built full-stack features using the MERN stack (React, Node.js, MongoDB).",
-      "Integrated REST APIs with focus on authentication and error handling.",
-      "Collaborated in team workflow: pull requests, code reviews, standups.",
+      "Build backend and frontend features using the MERN stack, focusing on APIs, authentication, and application logic.",
+      "Develop web applications with React, Next.js, Express.js, Node.js, MongoDB, and TypeScript.",
+      "Build scalable backend services and REST APIs using Python, Django, and FastAPI.",
+      "Implement AI-powered features to improve automation, code structure, and product reliability.",
     ],
-    tags: ["React", "Node.js", "MongoDB", "REST APIs", "Git", "Teamwork"],
+    tags: ["MERN", "Next.js", "TypeScript", "Python", "Django", "FastAPI", "AI Integration"],
   },
   {
     role: "Software & Operations Intern",
@@ -29,12 +30,11 @@ const items = [
     location: "Remote, XR-WORKOUT",
     date: "Nov 2025 — Feb 2026",
     highlights: [
-      "Contributed to software development tasks across frontend and backend features",
-      "Assisted in testing, debugging, and improving application performance",
-      "Collaborated with supervisor and team members to deliver feature updates and internal improvements",
-      "Participated in onboarding, planning sessions, and technical discussions",
+      "Supported sprint planning, feature delivery, product demos, and internal documentation across team workflows.",
+      "Used AI tools to streamline automation tasks, research workflows, and operational support activities.",
+      "Contributed to website updates and content workflows using AI-assisted tools for faster execution.",
     ],
-    tags: ["Remote Collaboration", "Software Testing", "Software Development", "Project Planning", "Operation Support"],
+    tags: ["Remote", "AI Tools", "Automation", "Content Workflows", "Sprint Planning"],
   },
   {
     role: "Bug Bounty / Web Security Trainee",
@@ -49,16 +49,16 @@ const items = [
     tags: ["Web Security", "PortSwigger", "XSS", "Injection", "Python", "Flask"],
   },
   {
-    role: "Software Developer & Automation Engineer",
+    role: "Software Developer & Python Engineer",
     type: "Freelance",
     location: "Saida, Lebanon",
     date: "Sept 2024 — Present",
     highlights: [
-      "Built backend systems and APIs for POS, pharmacy, and menu apps (Python, PHP, SQL).",
-      "Created automation tools (Selenium, scraping, data handling) to reduce manual workflows.",
-      "Designed small dashboards and backend services for real-time data processing.",
+      "Deliver full-stack business applications and backend services for POS, pharmacy, and digital menu systems.",
+      "Build REST APIs and automation workflows using Python, Flask, SQLAlchemy, and Selenium.",
+      "Automate repetitive tasks to reduce manual work and improve day-to-day operational efficiency.",
     ],
-    tags: ["Python", "PHP", "SQL", "APIs", "Automation", "Selenium"],
+    tags: ["Python", "Flask", "SQLAlchemy", "REST APIs", "Automation", "Selenium"],
   },
   {
     role: "Software Engineering Intern",

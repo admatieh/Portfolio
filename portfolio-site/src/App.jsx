@@ -14,30 +14,20 @@ import Experience from "./components/Experience";
 
 
 // Assets to preload
-import heroImg from "./assets/final.png";
-import finalImg from "./assets/final.png"; 
-import codingIcon from "./assets/coding-language.png";
-import cyberIcon from "./assets/cyber-security.png";
-import mysqlIcon from "./assets/mysql.png";
-import pythonIcon from "./assets/python.png";
-import passwordIcon from "./assets/password-cracking.png";
+const allImages = import.meta.glob("./assets/*.{png,jpg,jpeg,gif,svg,webp,avif}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
+const allAssetUrls = Object.values(allImages);
 
 export default function App() {
   const [ready, setReady] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const assets = [
-      heroImg,
-      finalImg,
-      codingIcon,
-      cyberIcon,
-      mysqlIcon,
-      pythonIcon,
-      passwordIcon,
-    ];
-
-    preloadImages(assets, setProgress).then(() => {
+    preloadImages(allAssetUrls, setProgress).then(() => {
       setTimeout(() => setReady(true), 150);
     });
   }, []);

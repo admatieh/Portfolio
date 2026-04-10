@@ -11,9 +11,9 @@ import linux from "../assets/linux.png";
 
 
 const stickers = [
-  { src: codingIcon, alt: "Coding", x: "8%",  y: "18%", r: -8 },
-  { src: cyberIcon,  alt: "Security", x: "72%", y: "16%", r: 10 },
-  { src: mysqlIcon,  alt: "MySQL", x: "10%", y: "72%", r: 6 },
+  { src: codingIcon, alt: "Coding", x: "8%", y: "18%", r: -8 },
+  { src: cyberIcon, alt: "Security", x: "72%", y: "16%", r: 10 },
+  { src: mysqlIcon, alt: "MySQL", x: "10%", y: "72%", r: 6 },
   { src: pythonIcon, alt: "Python", x: "78%", y: "78%", r: -6 },
   { src: passwordIcon, alt: "Password", x: "92%", y: "58%", r: 14 },
   { src: structure, alt: "Structure", x: "32%", y: "80%", r: -10 },
@@ -31,36 +31,36 @@ const Hero = () => {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 
-          {/* HERO HEADER (reference-style) */}
-        <div className="mx-auto w-full max-w-6xl space-y-8">
-          <h1 className="uppercase font-black tracking-[0.01em] leading-[0.82] text-[clamp(3.5rem,9vw,7.5rem)]">
-            FULL-STACK DEVELOPER
-          </h1>
+            {/* HERO HEADER (reference-style) */}
+            <div className="mx-auto w-full max-w-6xl space-y-8">
+              <h1 className="uppercase font-black tracking-[0.01em] leading-[0.82] text-[clamp(3.5rem,9vw,7.5rem)]">
+                FULL-STACK DEVELOPER
+              </h1>
 
-          <div className="grid gap-6 border-t border-white/15 pt-6 lg:grid-cols-[1fr_1fr_auto] lg:items-start">
-            <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
-              I build web apps with React + Python, focused on clean UI, solid architecture,
-              and maintainable code.
-            </p>
+              <div className="grid gap-6 border-t border-white/15 pt-6 lg:grid-cols-[1fr_1fr_auto] lg:items-start">
+                <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
+                  I build web apps with React + Python, focused on clean UI, solid architecture,
+                  and maintainable code.
+                </p>
 
-            <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
-              I like projects where performance, automation, and security basics matter — shipping
-              features without breaking fundamentals.
-            </p>
+                <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
+                  I like projects where performance, automation, and security basics matter — shipping
+                  features without breaking fundamentals.
+                </p>
 
-            <div className="flex lg:justify-end">
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-3 border-b border-white/40 pb-1 text-[12px] font-semibold uppercase tracking-wide text-[#E0E0E0] hover:text-white hover:border-white transition"
-              >
-                GET IN TOUCH
-                <span className="translate-x-0 transition-transform group-hover:translate-x-1" aria-hidden>
-                  →
-                </span>
-              </a>
+                <div className="flex lg:justify-end">
+                  <a
+                    href="#contact"
+                    className="group inline-flex items-center gap-3 border-b border-white/40 pb-1 text-[12px] font-semibold uppercase tracking-wide text-[#E0E0E0] hover:text-white hover:border-white transition"
+                  >
+                    GET IN TOUCH
+                    <span className="translate-x-0 transition-transform group-hover:translate-x-1" aria-hidden>
+                      →
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
           </div>
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.6fr_1fr] lg:items-start">
@@ -142,7 +142,7 @@ const Hero = () => {
 
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">Sibline</span>
-                    <span className="text-white/70">: IT Instructor — networking & security basics (DNS/DHCP, firewalls)</span>
+                    <span className="text-white/70">: IT Trainee — networking & security basics (DNS/DHCP, firewalls)</span>
                   </li>
 
                 </ul>
