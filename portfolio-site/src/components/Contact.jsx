@@ -54,7 +54,7 @@ const Contact = () => {
     "w-full rounded-sm border border-black/20 bg-white/40 px-4 py-3 text-sm text-black placeholder:text-black/40 outline-none focus:border-black/40 focus:ring-2 focus:ring-black/10 transition";
 
   return (
-    <section id="contact" className="bg-[#070707] text-white">
+    <section id="contact" className="bg-[#070707] text-white grid-paper-dark">
       <div className="mx-auto max-w-7xl w-full px-6 py-20">
         {/* Title */}
         <div>
@@ -70,7 +70,7 @@ const Contact = () => {
         </div>
         <div className="mt-14 grid gap-0 lg:grid-cols-2">
           {/* LEFT: info */}
-          <div className="relative border border-white/12 p-10 sm:p-12">
+          <div className="relative border-r border-white/12 p-10 sm:p-12">
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white shadow-lg">

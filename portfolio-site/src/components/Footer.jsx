@@ -31,6 +31,9 @@ const Footer = () => {
                 <a href="#experience" className="hover:text-black transition">
                   Work
                 </a>
+                <a href="#projects" className="hover:text-black transition">
+                  Projects
+                </a>
                 <a href="#skills" className="hover:text-black transition">
                   Skills
                 </a>

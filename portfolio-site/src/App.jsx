@@ -11,6 +11,7 @@ import EducationCerts from "./components/EducationCerts";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 
 
 // Assets to preload
@@ -33,14 +34,14 @@ export default function App() {
   }, []);
 
   if (!ready) return <Loader progress={progress} />;
-
   return (
-    <div id="top" className="min-h-screen bg-[#070707]">
+    <div id="top" className="min-h-screen bg-[#070707] grid-paper-dark">
       <Navbar />
       <Hero />
       <About />
       <Experience />
       <Skills />
+      <Projects />
       <EducationCerts />
       <Contact />
       <Footer />

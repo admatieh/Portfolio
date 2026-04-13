@@ -67,7 +67,7 @@ const Bar = ({ name, level, light = false }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-[#070707] text-white">
+    <section id="skills" className="bg-[#070707] text-white grid-paper-dark">
       <div className="mx-auto w-full max-w-7xl px-6 py-20">
         {/* Header */}
         <div>
@@ -85,7 +85,7 @@ const Skills = () => {
         {/* 2 columns */}
         <div className="mt-14 grid gap-0 lg:grid-cols-2">
           {/* Left panel */}
-          <div className="border border-white/12 p-10 sm:p-12">
+          <div className="border-r border-white/12 p-10 sm:p-12">
             <h3 className="text-xl font-semibold text-[#E0E0E0]">Programming</h3>
             <div className="mt-8 space-y-7">
               {programming.map((s) => (

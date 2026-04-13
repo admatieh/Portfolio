@@ -15,7 +15,7 @@ const stickers = [
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#070707] text-white">
+    <section id="about" className="bg-[#070707] text-white grid-paper-dark">
       <div className="mx-auto w-full max-w-7xl px-6 py-20">
         {/* Small label */}
         <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
@@ -33,11 +33,11 @@ const About = () => {
         {/* Two panels */}
         <div className="mt-12 grid gap-0 lg:grid-cols-2">
           {/* Left panel */}
-          <div className="border border-white/12 p-10 sm:p-12">
+          <div className="border-r  border-white/12 p-10 sm:p-12">
             <h3 className="text-lg font-semibold tracking-tight text-[#E0E0E0]">SHORT BIO</h3>
             <p className="mt-6 text-sm leading-relaxed text-white/75">
-              I’m Adam — a software engineer with hands-on experience building APIs, 
-              automation tools, and full-stack applications. I focus on developing 
+              I’m Adam — a software engineer with hands-on experience building APIs,
+              automation tools, and full-stack applications. I focus on developing
               reliable backend logic, efficient software solutions, and security-aware
               applications using Python, JavaScript, and modern web technologies.
             </p>
@@ -47,21 +47,21 @@ const About = () => {
             </p>
             <div className="mt-10 grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
-                <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">2+</div>
+                <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">3+</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
                   Years Learning
                 </div>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
-                <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">10+</div>
+                <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">30+</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
                   Projects
                 </div>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
-                <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">3</div>
+                <div className="text-3xl font-black tracking-tight text-[#E0E0E0]">4</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
                   Internships / Training
                 </div>

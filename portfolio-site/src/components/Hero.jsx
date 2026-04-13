@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import heroImg from "../assets/final.png";
 import codingIcon from "../assets/coding-language.png";
 import cyberIcon from "../assets/cyber-security.png";
@@ -11,21 +12,29 @@ import linux from "../assets/linux.png";
 
 
 const stickers = [
-  { src: codingIcon, alt: "Coding", x: "8%", y: "18%", r: -8 },
-  { src: cyberIcon, alt: "Security", x: "72%", y: "16%", r: 10 },
-  { src: mysqlIcon, alt: "MySQL", x: "10%", y: "72%", r: 6 },
-  { src: pythonIcon, alt: "Python", x: "78%", y: "78%", r: -6 },
-  { src: passwordIcon, alt: "Password", x: "92%", y: "58%", r: 14 },
-  { src: structure, alt: "Structure", x: "32%", y: "80%", r: -10 },
-  { src: hacker, alt: "Hacker", x: "80%", y: "40%", r: 0 },
-  { src: deepLearning, alt: "Deep Learning", x: "25%", y: "20%", r: 12 },
-  { src: linux, alt: "Linux", x: "20%", y: "50%", r: -14 },
+  { src: codingIcon, alt: "Coding", x: "8%", y: "18%", mx: "5%", my: "1%", r: -8 },
+  { src: cyberIcon, alt: "Security", x: "72%", y: "16%", mx: "85%", my: "20%", r: 10 },
+  { src: mysqlIcon, alt: "MySQL", x: "10%", y: "72%", mx: "12%", my: "85%", r: 6 },
+  { src: pythonIcon, alt: "Python", x: "78%", y: "78%", mx: "90%", my: "75%", r: -6 },
+  { src: passwordIcon, alt: "Password", x: "92%", y: "58%", mx: "90%", my: "50%", r: 14 },
+  { src: structure, alt: "Structure", x: "32%", y: "80%", mx: "10%", my: "60%", r: -10 },
+  { src: hacker, alt: "Hacker", x: "80%", y: "40%", mx: "50%", my: "5%", r: 0 },
+  { src: deepLearning, alt: "Deep Learning", x: "25%", y: "20%", mx: "10%", my: "30%", r: 12 },
+  { src: linux, alt: "Linux", x: "20%", y: "50%", mx: "25%", my: "10%", r: -14 },
 ];
 
-
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <section id="top" className="bg-[#070707] text-[#E0E0E0]">
+    <section id="top" className="bg-[#070707] text-[#E0E0E0] grid-paper-dark">
       <div className="mx-auto px-6 pt-5 pb-8">
 
         <div className="flex flex-col gap-6">
@@ -33,7 +42,7 @@ const Hero = () => {
 
             {/* HERO HEADER (reference-style) */}
             <div className="mx-auto w-full max-w-6xl space-y-8">
-              <h1 className="uppercase font-black tracking-[0.01em] leading-[0.82] text-[clamp(3.5rem,9vw,7.5rem)]">
+              <h1 className="uppercase font-black tracking-[0.01em] leading-[0.82] text-[clamp(2.5rem,9vw,7.5rem)]">
                 FULL-STACK DEVELOPER
               </h1>
 
@@ -65,7 +74,7 @@ const Hero = () => {
           </div>
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.6fr_1fr] lg:items-start">
             {/* LEFT: Image panel */}
-            <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black rounded-2xl lg:rounded-l-2xl lg:rounded-r-[999px]">
+            <div className="overflow-visible border border-white/10 bg-[#F3F1EC] text-black rounded-r-full">
               <div
                 className="
                   relative min-h-[340px] sm:min-h-[420px]
@@ -96,10 +105,11 @@ const Hero = () => {
                       h-14 w-14 sm:h-16 sm:w-16
                       drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)]
                       select-none
+                      transition-all duration-500
                     "
                     style={{
-                      left: s.x,
-                      top: s.y,
+                      left: isMobile ? (s.mx || s.x) : s.x,
+                      top: isMobile ? (s.my || s.y) : s.y,
                       transform: `translate(-50%, -50%) rotate(${s.r}deg)`,
                     }}
                   />
@@ -123,7 +133,7 @@ const Hero = () => {
                   </li>
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">Network Admininstration</span>
-                    <span className="text-white/70">: Active Directory, DNS/DHCP configuration and management + security</span>
+                    <span className="text-white/70">: Active Directory, DNS/DHCP configs and management + security</span>
                   </li>
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">The Digital Hub</span>

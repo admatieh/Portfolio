@@ -24,34 +24,18 @@ const certs = [
 
 const EducationCerts = () => {
   return (
-    <section id="education" className="bg-[#070707] text-white">
-      <div className="mx-auto w-full px-4 sm:px-6 py-12 sm:py-20">
+    <section id="education" className="bg-[#070707] text-white grid-paper-dark">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-20">
         {/* Title */}
-        <div
-          className="
-    overflow-visible border border-white/10 bg-[#F3F1EC] text-black
-    py-6 sm:py-8 px-4 sm:px-6
-    w-full sm:max-w-[600px]
-    rounded-l-2xl rounded-r-[999px]
-  "
-        >
-          <div
-            className="
-      relative min-h-[240px] sm:min-h-[210px]
-      bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
-      bg-[size:32px_32px] sm:bg-[size:48px_48px] 
-    "
-          >
-            <p className="text-xs font-semibold tracking-[0.18em] text-black/60">
-              EDUCATION & CERTIFICATIONS
-            </p>
-
-            <div className="mt-4 flex items-end gap-4 sm:gap-6">
-              <div className="h-10 sm:h-14 w-2 bg-black" />
-              <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.0rem,7vw,4.8rem)] text-black">
-                MY STUDIES
-              </h2>
-            </div>
+        <div>
+          <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
+            EDUCATION & CERTIFICATIONS
+          </p>
+          <div className="mt-4 flex items-end gap-6">
+            <div className="h-14 w-2 bg-[#E0E0E0]" />
+            <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
+              My Studies
+            </h2>
 
             {/* Education row */}
             <div className="mt-8 sm:mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">

@@ -76,7 +76,7 @@ const items = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="bg-[#070707] text-white">
+    <section id="experience" className="bg-[#070707] text-white grid-paper-dark">
       <div className="mx-auto w-full px-6 py-20">
         {/* Header */}
         <div className="flex items-end justify-between gap-6 border-b border-white/10 pb-8">
