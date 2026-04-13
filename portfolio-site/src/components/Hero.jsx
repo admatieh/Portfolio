@@ -42,7 +42,7 @@ const Hero = () => {
 
             {/* HERO HEADER (reference-style) */}
             <div className="mx-auto w-full max-w-6xl space-y-8">
-              <h1 className="uppercase font-black tracking-[0.01em] leading-[0.82] text-[clamp(2.5rem,9vw,7.5rem)]">
+              <h1 className="uppercase font-black tracking-[0.01em] leading-[0.82] text-[clamp(3rem,9vw,7.5rem)]">
                 FULL-STACK DEVELOPER
               </h1>
 
