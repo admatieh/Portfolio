@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#070707"/>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="blue" x1="160" y1="80" x2="1040" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4C8DFF" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#E0E0E0" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="990" cy="105" r="210" fill="#4C8DFF" fill-opacity="0.16"/>
+  <circle cx="160" cy="560" r="260" fill="#E0E0E0" fill-opacity="0.08"/>
+  <rect x="86" y="82" width="1028" height="466" rx="36" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="130" y="132" width="8" height="95" rx="4" fill="#4C8DFF"/>
+  <text x="164" y="168" fill="#E0E0E0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="6">ADAM ATIEH</text>
+  <text x="130" y="300" fill="#E0E0E0" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-3">FULL-STACK</text>
+  <text x="130" y="390" fill="#E0E0E0" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-3">DEVELOPER</text>
+  <text x="134" y="452" fill="rgba(224,224,224,0.78)" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Web systems • Backend APIs • Dashboards • Automation &amp; AI workflows</text>
+  <g transform="translate(825 360)">
+    <rect width="220" height="118" rx="28" fill="#F3F1EC"/>
+    <text x="32" y="50" fill="#070707" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2">PORTFOLIO</text>
+    <text x="32" y="82" fill="rgba(7,7,7,0.62)" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Case studies + proof</text>
+  </g>
+</svg>
