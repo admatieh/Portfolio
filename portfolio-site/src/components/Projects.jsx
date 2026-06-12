@@ -3,37 +3,37 @@ import React, { useState } from 'react';
 const projects = [
     {
         title: "SMART HELMET BACKEND",
-        description: "Advanced backend infrastructure for processing real-time telemetry from smart safety helmets, featuring high-concurrency data ingestion and processing.",
+        description: "Backend system for a safety-focused helmet project: telemetry ingestion, real-time event handling, alerts, mobile-client communication, and AI-assisted risk detection support.",
         tech: ["FastAPI", "WebSockets", "SQLAlchemy", "ONNX"],
-        stats: { label: "Performance", value: "99.9%" },
+        stats: { label: "Role", value: "Backend" },
         link: "https://github.com/admatieh/smart_helmet_backend"
     },
     {
         title: "AXIOM BUILDERS",
-        description: "A high-end architectural showcase website with premium animations, modern design, and optimized performance for visual storytelling.",
+        description: "Premium architecture website concept focused on visual storytelling, smooth page sections, responsive layout, and a polished client-facing presentation.",
         tech: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
-        stats: { label: "Design", value: "A+" },
+        stats: { label: "Focus", value: "UI" },
         link: "https://github.com/admatieh/axiom-builders-site"
     },
     {
         title: "QUEUEBUDDY",
-        description: "An intelligent queue management system for optimizing service flow and customer experience in high-traffic environments.",
+        description: "Queue management application designed to organize service flow, track waiting states, and improve the experience for staff and customers.",
         tech: ["React", "Express", "MongoDB", "TypeScript"],
-        stats: { label: "Uptime", value: "24/7" },
+        stats: { label: "Type", value: "System" },
         link: "https://github.com/admatieh/Queue"
     },
     {
         title: "FASTAPI AUTHENTICATION",
-        description: "A production-ready authentication template implementing secure JWT flows, user management, and session handling.",
+        description: "Authentication template with JWT flows, user management, protected routes, and a clean full-stack structure for secure application foundations.",
         tech: ["FastAPI", "React", "TypeScript", "JWT"],
-        stats: { label: "Security", value: "Grade A" },
+        stats: { label: "Focus", value: "Auth" },
         link: "https://github.com/admatieh/FastAPI-Authentication-Project"
     },
     {
         title: "MACHINE LEARNING HUB",
-        description: "Predictive modeling and data analysis pipelines for extracting actionable insights from complex datasets.",
+        description: "Machine-learning practice hub covering data preparation, model training, evaluation, and analysis workflows using Python's core data stack.",
         tech: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-        stats: { label: "Accuracy", value: "96%" },
+        stats: { label: "Focus", value: "ML" },
         link: "https://github.com/admatieh/Machine-Learning-Project"
     }
 ];
@@ -50,7 +50,7 @@ const Projects = () => {
                         WORKS
                     </p>
                     <div className="mt-4 flex items-end gap-6">
-                        <div className="h-14 w-2 bg-[#E0E0E0]" />
+                        <div className="h-14 w-[3px] rounded-full bg-[#4C8DFF]" />
                         <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
                             SELECTED PROJECTS
                         </h2>
@@ -60,6 +60,9 @@ const Projects = () => {
                 {/* Container with extra right padding on desktop */}
                 <div className="flex gap-0">
                     <div className="flex-1 pr-0 lg:pr-40">
+                        <p className="mb-6 max-w-2xl text-sm leading-relaxed text-white/70">
+                            Click a project to expand it, then open the source. Each card highlights the problem, role, and stack behind the work.
+                        </p>
                         {/* Stacked Panels Container */}
                         <div className="relative mt-12 min-h-[600px] lg:min-h-[750px]">
                             {projects.map((project, index) => {

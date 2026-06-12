@@ -47,12 +47,12 @@ const Hero = () => {
               </h1>
 
               <div className="grid gap-6 border-t border-white/15 pt-6 lg:grid-cols-[1fr_1fr_auto] lg:items-start">
-                <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
-                  I build web apps with React + Python, focused on clean UI, solid architecture,
-                  and maintainable code.
+                <p className="text-[13px] leading-relaxed text-white/80 max-w-[44ch]">
+                  I build reliable full-stack applications with React, Next.js, Python, and Node.js —
+                  focused on clean interfaces, secure APIs, automation, and maintainable architecture.
                 </p>
 
-                <p className="text-[13px] leading-relaxed text-white/70 max-w-[40ch]">
+                <p className="text-[13px] leading-relaxed text-white/80 max-w-[40ch]">
                   I like projects where performance, automation, and security basics matter — shipping
                   features without breaking fundamentals.
                 </p>
@@ -129,30 +129,30 @@ const Hero = () => {
                 <ul className="space-y-6 text-sm text-white/90">
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">XRWorkout</span>
-                    <span className="text-white/70">: Multiple AI integrations and vibe-coded websites with dynamic aesthetics</span>
+                    <span className="text-white/75">: AI-assisted website prototypes and dynamic frontend experiences</span>
                   </li>
                   <li>
-                    <span className="font-semibold text-[#E0E0E0]">Network Admininstration</span>
-                    <span className="text-white/70">: Active Directory, DNS/DHCP configs and management + security</span>
+                    <span className="font-semibold text-[#E0E0E0]">Network Administration</span>
+                    <span className="text-white/75">: Active Directory, DNS/DHCP configs and management + security</span>
                   </li>
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">The Digital Hub</span>
-                    <span className="text-white/70">: MERN full-stack (React/Node), PR workflow + code reviews</span>
+                    <span className="text-white/75">: MERN full-stack (React/Node), PR workflow + code reviews</span>
                   </li>
 
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">Semicolon Security</span>
-                    <span className="text-white/70">: Bug bounty training — PortSwigger labs, XSS/injection practice</span>
+                    <span className="text-white/75">: Bug bounty training — PortSwigger labs, XSS/injection practice</span>
                   </li>
 
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">Freelance</span>
-                    <span className="text-white/70">: Built POS/pharmacy systems, Java/MySQL/Node, workflow automation</span>
+                    <span className="text-white/75">: Built POS/pharmacy systems, Java/MySQL/Node, workflow automation</span>
                   </li>
 
                   <li>
                     <span className="font-semibold text-[#E0E0E0]">Sibline</span>
-                    <span className="text-white/70">: IT Trainee — networking & security basics (DNS/DHCP, firewalls)</span>
+                    <span className="text-white/75">: IT Trainee — networking & security basics (DNS/DHCP, firewalls)</span>
                   </li>
 
                 </ul>

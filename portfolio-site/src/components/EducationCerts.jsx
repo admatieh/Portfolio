@@ -31,18 +31,20 @@ const EducationCerts = () => {
           <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
             EDUCATION & CERTIFICATIONS
           </p>
-          <div className="mt-4 flex items-end gap-6">
-            <div className="h-14 w-2 bg-[#E0E0E0]" />
+          <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end">
+            <div className="flex items-end gap-4">
+              <div className="h-14 w-[3px] rounded-full bg-[#4C8DFF]" />
             <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
               My Studies
             </h2>
+            </div>
 
             {/* Education row */}
-            <div className="mt-8 sm:mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center lg:pb-1">
 
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-black">{education.degree}</h3>
-                <p className="mt-1 text-sm text-black/65">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#E0E0E0]">{education.degree}</h3>
+                <p className="mt-1 text-sm text-white/70">
                   {education.school} | {education.location} | {education.year}
                 </p>
               </div>

@@ -72,10 +72,10 @@ const Skills = () => {
         {/* Header */}
         <div>
           <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
-            SkILLS
+            SKILLS
           </p>
           <div className="mt-4 flex items-end gap-6">
-            <div className="h-14 w-2 bg-[#E0E0E0]" />
+            <div className="h-14 w-[3px] rounded-full bg-[#4C8DFF]" />
             <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
               WHAT I KNOW
             </h2>
