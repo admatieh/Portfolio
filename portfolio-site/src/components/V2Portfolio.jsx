@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowUpRight,
   Braces,
@@ -90,27 +90,14 @@ const ascii = String.raw`
 
 const V2Portfolio = () => {
   const [noise, setNoise] = useState(0);
-  const [cursor, setCursor] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
     const interval = window.setInterval(() => setNoise((n) => (n + 1) % 999), 1300);
-    const onMove = (event) => {
-      setCursor({
-        x: Math.round((event.clientX / window.innerWidth) * 100),
-        y: Math.round((event.clientY / window.innerHeight) * 100),
-      });
-    };
-    window.addEventListener("pointermove", onMove);
-    return () => {
-      window.clearInterval(interval);
-      window.removeEventListener("pointermove", onMove);
-    };
+    return () => window.clearInterval(interval);
   }, []);
 
-  const coordinates = useMemo(() => `${cursor.x}.${String(cursor.y).padStart(2, "0")}`, [cursor]);
-
   return (
-    <main className="v2-shell" style={{ "--mx": `${cursor.x}%`, "--my": `${cursor.y}%` }}>
+    <main className="v2-shell">
       <div className="v2-noise" />
       <nav className="v2-nav" aria-label="Portfolio v2 navigation">
         <a href="#top" className="v2-brand">ADAM / V2</a>
@@ -139,7 +126,7 @@ const V2Portfolio = () => {
         </div>
 
         <div className="v2-portrait-board" aria-label="Adam visual identity board">
-          <div className="v2-coordinate">cursor:{coordinates} / noise:{noise}</div>
+          <div className="v2-coordinate">noise:{noise}</div>
           <div className="v2-photo-wrap">
             <img src={adamImage} alt="Adam Atieh" />
             <div className="v2-scanline" />
