@@ -12,6 +12,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import FeaturedProject from "./components/FeaturedProject";
+import WhatIBring from "./components/WhatIBring";
 
 
 // Assets to preload
@@ -39,8 +41,10 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <WhatIBring />
       <Experience />
       <Skills />
+      <FeaturedProject />
       <Projects />
       <EducationCerts />
       <Contact />

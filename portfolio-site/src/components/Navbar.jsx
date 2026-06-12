@@ -42,6 +42,14 @@ const Navbar = () => {
           </a>
 
           <a
+            href="#featured"
+            className="group relative pb-1 text-white/80 transition-colors hover:text-white"
+          >
+            Featured
+            <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-white transition-all duration-200 group-hover:w-full" />
+          </a>
+
+          <a
             href="#projects"
             className="group relative pb-1 text-white/80 transition-colors hover:text-white"
           >
@@ -114,6 +122,9 @@ const Navbar = () => {
               </a>
               <a href="#projects" onClick={closeMenu} className="mobile-link">
                 Projects
+              </a>
+              <a href="#featured" onClick={closeMenu} className="mobile-link">
+                Featured
               </a>
               <a href="#skills" onClick={closeMenu} className="mobile-link">
                 Skills

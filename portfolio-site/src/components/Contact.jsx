@@ -5,9 +5,6 @@ import cvPdf from "../assets/Adam-Atieh-CV.pdf";
 import muscle from "../assets/map.png";
 import automation from "../assets/gmail.png";
 import engineering from "../assets/phone.png";
-import call from "../assets/removed.png";
-
-
 const stickers = [
   { src: muscle, alt: "muscle", x: "80%", y: "10%", r: -8 },
   { src: automation, alt: "automation", x: "80%", y: "36%", r: 10 },
@@ -51,7 +48,7 @@ const Contact = () => {
 
 
   const inputBase =
-    "w-full rounded-sm border border-black/20 bg-white/40 px-4 py-3 text-sm text-black placeholder:text-black/40 outline-none focus:border-black/40 focus:ring-2 focus:ring-black/10 transition";
+    "w-full rounded-sm border border-black/25 bg-white/70 px-4 py-3 text-sm text-black placeholder:text-black/45 outline-none focus:border-black/50 focus:bg-white focus:ring-2 focus:ring-black/10 transition";
 
   return (
     <section id="contact" className="bg-[#070707] text-white grid-paper-dark">
@@ -143,7 +140,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
               >
                 <Download className="h-4 w-4" />
-                Download CV
+                Download Resume
               </a>
             </div>
 
@@ -251,7 +248,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full rounded-md bg-black px-8 py-4 text-sm font-semibold text-white hover:bg-black/80 transition shadow-lg"
                 >
-                  Send Message
+                  Send via Email
                 </button>
               </div>
 

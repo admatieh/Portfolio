@@ -1,20 +1,28 @@
-const programming = [
-  { name: "Python", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "TypeScript", level: 85 },
-  { name: "SQL", level: 80 },
-  { name: "Java", level: 75 },
-  { name: "PHP", level: 70 },
-  { name: "HTML/CSS", level: 90 },
-];
-
-const frameworks = [
-  { name: "React", level: 85 },
-  { name: "Node.js / Express", level: 80 },
-  { name: "Django / FastAPI / Flask", level: 80 },
-  { name: "Tailwind CSS", level: 90 },
-  { name: "PostgreSQL / MySQL / MongoDB", level: 80 },
-  { name: "Next.js", level: 90 },
+const skillGroups = [
+  {
+    title: "Core Stack",
+    level: "Strong",
+    description: "Building full-stack features with modern frontend, backend APIs, and practical data handling.",
+    items: ["React", "Next.js", "JavaScript", "TypeScript", "Node.js", "Python"],
+  },
+  {
+    title: "Backend & Data",
+    level: "Strong",
+    description: "Designing APIs, auth flows, database models, automation scripts, and maintainable backend logic.",
+    items: ["FastAPI", "Django", "Flask", "Express", "SQL", "MongoDB", "SQLite"],
+  },
+  {
+    title: "Tools & Workflow",
+    level: "Comfortable",
+    description: "Working with Git, GitHub, Linux, API testing, AI-assisted planning, and debugging workflows.",
+    items: ["Git / GitHub", "Linux", "Postman", "Selenium", "VS Code", "Figma", "AI Tools"],
+  },
+  {
+    title: "Security Awareness",
+    level: "Growing",
+    description: "Applying safer defaults while learning through PortSwigger labs, validation, auth, and web security practice.",
+    items: ["JWT", "Input Validation", "XSS Basics", "Injection Basics", "Burp Suite", "PortSwigger"],
+  },
 ];
 
 const chips = [
@@ -36,8 +44,6 @@ const chips = [
   "Linux",
   "Selenium",
   "Postman",
-  "VS Code",
-  "Figma",
   "Burp Suite",
   "Active Directory",
   "Web Security",
@@ -47,70 +53,57 @@ const chips = [
   "Adaptability",
 ];
 
-const Bar = ({ name, level, light = false }) => {
-  return (
-    <div className="space-y-2">
-      <div className="flex items-end justify-between gap-4">
-        <span className={`text-sm font-medium ${light ? 'text-black/85' : 'text-white/85'}`}>{name}</span>
-        <span className={`text-xs ${light ? 'text-black/55' : 'text-white/55'}`}>{level}%</span>
-      </div>
-
-      <div className={`h-2 w-full rounded-full ${light ? 'bg-black/10' : 'bg-white/10'}`}>
-        <div
-          className={`h-2 rounded-full ${light ? 'bg-black/90' : 'bg-white/90'}`}
-          style={{ width: `${level}%` }}
-        />
-      </div>
-    </div>
-  );
-};
-
 const Skills = () => {
   return (
     <section id="skills" className="bg-[#070707] text-white grid-paper-dark">
       <div className="mx-auto w-full max-w-7xl px-6 py-20">
-        {/* Header */}
-        <div>
-          <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
-            SKILLS
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
+              SKILLS
+            </p>
+            <div className="mt-4 flex items-end gap-6">
+              <div className="h-14 w-[3px] rounded-full bg-[#4C8DFF]" />
+              <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
+                HOW I BUILD
+              </h2>
+            </div>
+          </div>
+          <p className="max-w-md text-sm leading-relaxed text-white/70">
+            Instead of random percentages, this section groups the tools I use by how they show up in real projects: interfaces, APIs, data, workflow, and security-aware development.
           </p>
-          <div className="mt-4 flex items-end gap-6">
-            <div className="h-14 w-[3px] rounded-full bg-[#4C8DFF]" />
-            <h2 className="uppercase font-black tracking-[-0.03em] leading-[0.9] text-[clamp(2.6rem,6vw,4.8rem)] text-[#E0E0E0]">
-              WHAT I KNOW
-            </h2>
-          </div>
         </div>
 
-        {/* 2 columns */}
-        <div className="mt-14 grid gap-0 lg:grid-cols-2">
-          {/* Left panel */}
-          <div className="border-r border-white/12 p-10 sm:p-12">
-            <h3 className="text-xl font-semibold text-[#E0E0E0]">Programming</h3>
-            <div className="mt-8 space-y-7">
-              {programming.map((s) => (
-                <Bar key={s.name} name={s.name} level={s.level} />
-              ))}
-            </div>
-          </div>
-
-          {/* Right panel */}
-          <div className="
-            relative bg-[#F3F1EC] text-black border border-black/5 p-10 sm:p-12
-            bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
-            bg-[size:48px_48px]
-            overflow-hidden rounded-b-[200px] lg:rounded-r-full lg:rounded-bl-none
-          ">
-            <h3 className="text-xl font-semibold text-black">Frameworks / Tools</h3>
-            <div className="mt-8 space-y-7 relative z-10">
-              {frameworks.map((s) => (
-                <Bar key={s.name} name={s.name} level={s.level} light />
-              ))}
-            </div>
-          </div>
+        <div className="mt-14 grid gap-4 lg:grid-cols-4">
+          {skillGroups.map((group, index) => {
+            const light = index === 1;
+            return (
+              <article
+                key={group.title}
+                className={`rounded-[2rem] border p-6 ${light
+                  ? "border-black/5 bg-[#F3F1EC] text-black grid-paper-light"
+                  : "border-white/10 bg-white/[0.04] text-white"
+                  }`}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className={`text-xl font-black tracking-tight ${light ? "text-black" : "text-[#E0E0E0]"}`}>{group.title}</h3>
+                  <span className={`rounded-full px-3 py-1 text-[9px] font-black uppercase tracking-widest ${light ? "bg-black text-white" : "bg-[#4C8DFF]/15 text-[#8EB7FF] ring-1 ring-[#4C8DFF]/25"}`}>
+                    {group.level}
+                  </span>
+                </div>
+                <p className={`mt-5 text-sm leading-relaxed ${light ? "text-black/65" : "text-white/65"}`}>{group.description}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span key={item} className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${light ? "border-black/10 bg-black/5 text-black/70" : "border-white/10 bg-white/5 text-white/70"}`}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
         </div>
 
-        {/* Chips */}
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {chips.map((c) => (
             <span

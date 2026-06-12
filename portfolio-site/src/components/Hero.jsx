@@ -48,8 +48,8 @@ const Hero = () => {
 
               <div className="grid gap-6 border-t border-white/15 pt-6 lg:grid-cols-[1fr_1fr_auto] lg:items-start">
                 <p className="text-[13px] leading-relaxed text-white/80 max-w-[44ch]">
-                  I build reliable full-stack applications with React, Next.js, Python, and Node.js —
-                  focused on clean interfaces, secure APIs, automation, and maintainable architecture.
+                  I build practical web systems, dashboards, backend APIs, automation tools, and
+                  AI-assisted workflows with React, Next.js, Python, and Node.js.
                 </p>
 
                 <p className="text-[13px] leading-relaxed text-white/80 max-w-[40ch]">
@@ -57,17 +57,28 @@ const Hero = () => {
                   features without breaking fundamentals.
                 </p>
 
-                <div className="flex lg:justify-end">
+                <div className="flex flex-wrap gap-3 lg:justify-end">
+                  <a
+                    href="#featured"
+                    className="rounded-full bg-[#E0E0E0] px-5 py-3 text-[11px] font-bold uppercase tracking-widest text-black transition hover:bg-white"
+                  >
+                    View Projects
+                  </a>
                   <a
                     href="#contact"
-                    className="group inline-flex items-center gap-3 border-b border-white/40 pb-1 text-[12px] font-semibold uppercase tracking-wide text-[#E0E0E0] hover:text-white hover:border-white transition"
+                    className="rounded-full border border-white/25 px-5 py-3 text-[11px] font-bold uppercase tracking-widest text-[#E0E0E0] transition hover:bg-white/10 hover:text-white"
                   >
-                    GET IN TOUCH
-                    <span className="translate-x-0 transition-transform group-hover:translate-x-1" aria-hidden>
-                      →
-                    </span>
+                    Contact Me
                   </a>
                 </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                {["Full-Stack Apps", "Backend APIs", "Dashboards", "Automation & AI"].map((badge) => (
+                  <span key={badge} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-white/70">
+                    {badge}
+                  </span>
+                ))}
               </div>
             </div>
 
