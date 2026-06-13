@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import {
   ArrowUpRight,
+  Bot,
   Braces,
   Cpu,
+  Database,
   Github,
+  Linkedin,
   Mail,
   MapPin,
   Radar,
@@ -14,79 +17,121 @@ import {
 import adamImage from "../assets/final.png";
 
 const fragments = [
-  "backend-first brain",
-  "full-stack hands",
-  "security-aware defaults",
+  "Lebanon / remote-ready",
+  "FastAPI + Django + Express",
+  "React / TypeScript / Next.js",
   "automation over repetition",
+  "security-aware defaults",
   "dashboards that explain",
-  "AI tools, human review",
-  "Saida → remote teams",
+  "AI tools with human review",
+  "28 public repos",
+  "MERN + Python systems",
   "ship practical systems",
+];
+
+const stats = [
+  ["28", "public GitHub repositories"],
+  ["2023", "GitHub build trail started"],
+  ["4", "core lanes: backend, UI, automation, security"],
+  ["∞", "curiosity for useful systems"],
 ];
 
 const projects = [
   {
     code: "CASE_01",
     title: "Discord Activity Intelligence Bot",
-    role: "Bot workflows / dashboard logic / reporting",
-    note: "A community activity machine: voice sessions become attendance, analytics, reports, and fewer manual checks.",
-    stack: ["Node.js", "Discord.js", "Next.js", "SQLite"],
+    role: "Full-stack bot system / instructor workspace / analytics",
+    note: "Turns live Discord voice sessions into attendance records, reports, scheduled announcements, participant reviews, and a Next.js dashboard instead of raw command chaos.",
+    proof: ["Discord.js runtime", "Express bot API", "SQLite persistence", "Next.js dashboard", "scheduler + reports"],
+    stack: ["Node.js", "Discord.js", "Next.js", "SQLite", "Express"],
     link: "https://github.com/admatieh/Discord-Activity-Intelligence-Bot",
-    mood: "messy social data → readable proof",
+    mood: "voice chaos → instructor control room",
   },
   {
     code: "CASE_02",
     title: "Smart Helmet Backend",
-    role: "Telemetry / APIs / alert logic / AI support",
-    note: "A safety backend that listens to real-world signals, stores events, and helps a mobile client react when risk appears.",
-    stack: ["FastAPI", "WebSockets", "SQLAlchemy", "ONNX"],
+    role: "Real-time telemetry / risk pipeline / safety backend",
+    note: "A FastAPI service that ingests GPS, IMU, heart-rate, and speed streams, writes them through a background queue worker, and broadcasts computed risk status to dashboards in real time.",
+    proof: ["WebSocket ingestion", "Pydantic validation", "async SQLAlchemy", "risk state pipeline", "ONNX-ready inference flow"],
+    stack: ["Python", "FastAPI", "WebSockets", "SQLAlchemy", "ONNX"],
     link: "https://github.com/admatieh/smart_helmet_backend",
-    mood: "hardware noise → safety signal",
+    mood: "sensor noise → safety signal",
   },
   {
     code: "CASE_03",
-    title: "FastAPI Authentication Project",
-    role: "Auth architecture / protected routes / frontend integration",
-    note: "A cleaner starting point for auth flows: JWT, user handling, protected APIs, and less fragile boilerplate.",
-    stack: ["FastAPI", "React", "TypeScript", "JWT"],
+    title: "FastAPI Authentication System",
+    role: "Auth architecture / protected routes / admin workflow",
+    note: "A full-stack authentication project with JWT login, role-based access, admin approval flows, user management, password changes, and a responsive React dashboard.",
+    proof: ["JWT bearer auth", "admin/client roles", "approval workflow", "public stats dashboard", "mobile nav"],
+    stack: ["FastAPI", "React", "TypeScript", "SQLite", "PyJWT"],
     link: "https://github.com/admatieh/FastAPI-Authentication-Project",
-    mood: "trust boundaries → working login",
+    mood: "trust boundaries → working product flow",
   },
   {
     code: "CASE_04",
     title: "QueueBuddy",
-    role: "Full-stack flow / queue logic / service UX",
-    note: "A service-flow app for making waiting less chaotic and staff decisions easier to see.",
-    stack: ["React", "Express", "MongoDB", "TypeScript"],
+    role: "Full-stack venue flow / queue logic / service UX",
+    note: "A real-time queue and seat-management platform for making waiting less chaotic, giving staff clearer decisions, and turning venue flow into a visible system.",
+    proof: ["React interface", "Express backend", "MongoDB data model", "seat/queue logic", "cross-platform setup"],
+    stack: ["React", "Express", "MongoDB", "TypeScript", "Node.js"],
     link: "https://github.com/admatieh/Queue",
     mood: "crowded room → organized flow",
+  },
+  {
+    code: "CASE_05",
+    title: "Velora E-Commerce Platform",
+    role: "Django REST / storefront / admin operations",
+    note: "A production-style e-commerce build with product variants, persistent cart, JWT authentication, email verification, checkout logic, and an admin dashboard for store operations.",
+    proof: ["Django REST Framework", "React storefront", "product variants", "cart + orders", "admin dashboard"],
+    stack: ["Django", "DRF", "React", "TypeScript", "Tailwind"],
+    link: "https://github.com/admatieh/Ecommerce-Django-Website",
+    mood: "catalogue data → working commerce system",
+  },
+  {
+    code: "CASE_06",
+    title: "Security + Automation Lab",
+    role: "Python scripts / QA practice / security habits",
+    note: "A collection of small practical tools: Selenium playground examples, password leak checking, password validation, scraping, image conversion, and experiments that show repetition becoming scripts.",
+    proof: ["Selenium examples", "HIBP leak check", "BeautifulSoup scraping", "bulk conversion", "security validation"],
+    stack: ["Python", "Selenium", "BeautifulSoup", "APIs", "QA"],
+    link: "https://github.com/admatieh?tab=repositories",
+    mood: "manual checks → repeatable tools",
   },
 ];
 
 const logs = [
-  "[01] started with Python + backend logic",
-  "[02] added frontend because users need to touch the system",
-  "[03] learned security the hard way: validate, test, assume nothing",
-  "[04] uses AI like a power tool, not a replacement brain",
-  "[05] prefers weird interfaces when they still explain the work",
+  "[profile] adam abo atieh — full-stack developer in Lebanon",
+  "[signal] software engineer // automation & security testing // MERN + Python",
+  "[pattern] builds when the workflow is messy: queues, telemetry, auth, dashboards, bots",
+  "[taste] keeps interfaces alive, dark, strange, and practical — not corporate-clean",
+  "[rule] AI can assist the workflow; humans still own judgment, privacy, and launch decisions",
 ];
 
 const capabilities = [
-  { icon: Braces, label: "APIs", text: "FastAPI, Django, Express, auth flows, data modeling" },
-  { icon: Radar, label: "Dashboards", text: "interfaces that turn messy signals into decisions" },
-  { icon: Zap, label: "Automation", text: "bots, scripts, workflows, reports, repetitive-task killers" },
-  { icon: ShieldCheck, label: "Security", text: "validation, JWT, XSS/injection basics, safer defaults" },
+  { icon: Braces, label: "Backend APIs", text: "FastAPI, Django REST, Express, auth flows, validation, data modeling, WebSockets, and service boundaries." },
+  { icon: Radar, label: "Dashboards", text: "Interfaces that turn messy operational signals into filters, reports, status views, and decisions." },
+  { icon: Zap, label: "Automation", text: "Bots, scheduled tasks, Python scripts, scrapers, reporting flows, and tools that reduce repeated manual work." },
+  { icon: ShieldCheck, label: "Security & QA", text: "JWT, role-based access, validation, password safety tools, Selenium practice, and security-aware defaults." },
+  { icon: Bot, label: "AI Workflow", text: "Agent-assisted research, internal knowledge, structured prompts, review loops, and practical AI tooling." },
+  { icon: Database, label: "Data Layer", text: "SQLite, MongoDB, MySQL-ready services, SQLAlchemy, queue workers, telemetry records, and chartable data." },
+];
+
+const timeline = [
+  ["01", "Python scripts", "Small automations, validators, scrapers, converters, and security checks."],
+  ["02", "Full-stack products", "React, TypeScript, MERN, Django, FastAPI, and dashboards that users can actually touch."],
+  ["03", "Real systems", "Discord instructor workspace, smart helmet telemetry, queue management, authentication, e-commerce."],
+  ["04", "Current edge", "AI-assisted workflows, Arzware-style digital systems, and stronger proof-driven portfolio storytelling."],
 ];
 
 const ascii = String.raw`
       adam@portfolio-v2
-   ┌──────────────────────┐
-   │ backend  frontend    │
-   │    \      /          │
-   │   automation         │
-   │      \  /            │
-   │   useful systems     │
-   └──────────────────────┘`;
+   ┌────────────────────────────┐
+   │  backend  →  dashboard     │
+   │     ↓          ↑           │
+   │ automation → security      │
+   │     ↓          ↑           │
+   │   useful human systems     │
+   └────────────────────────────┘`;
 
 const V2Portfolio = () => {
   const [noise, setNoise] = useState(0);
@@ -102,39 +147,46 @@ const V2Portfolio = () => {
       <nav className="v2-nav" aria-label="Portfolio v2 navigation">
         <a href="#top" className="v2-brand">ADAM / V2</a>
         <div>
-          <a href="#cases">cases</a>
-          <a href="#stack">stack</a>
           <a href="#signal">signal</a>
+          <a href="#cases">case files</a>
+          <a href="#stack">stack</a>
+          <a href="#timeline">timeline</a>
           <a href="#contact">contact</a>
         </div>
       </nav>
 
       <section id="top" className="v2-hero">
         <div className="v2-hero-copy">
-          <p className="v2-kicker">portfolio experiment // not template-safe</p>
+          <p className="v2-kicker">real portfolio // weird system edition</p>
           <h1>
-            I build useful systems from messy inputs.
-            <span> backend, dashboards, automation, strange little machines.</span>
+            I turn messy workflows into software that behaves.
+            <span> backend APIs, dashboards, automation, security-aware full-stack systems.</span>
           </h1>
           <p className="v2-lede">
-            My read on Adam: backend-first full-stack developer, practical builder, curious about AI and security, with a taste for interfaces that feel alive instead of corporate-clean.
+            I’m Adam Abo Atieh, a Lebanon-based full-stack developer focused on MERN, Python, FastAPI, Django, automation, QA/security testing, and AI-assisted workflows. My best projects are not decoration — they are systems that listen, store, report, alert, and make work easier to understand.
           </p>
           <div className="v2-actions">
-            <a href="#cases">open case files <ArrowUpRight size={16} /></a>
-            <a href="mailto:admatieh@gmail.com">send signal <Mail size={16} /></a>
+            <a href="#cases">view real case files <ArrowUpRight size={16} /></a>
+            <a href="mailto:admatieh@gmail.com">contact me <Mail size={16} /></a>
+            <a href="https://www.linkedin.com/in/adam-abo-atyeh/" target="_blank" rel="noreferrer">LinkedIn <Linkedin size={16} /></a>
+          </div>
+          <div className="v2-hero-proof" aria-label="quick facts">
+            {stats.map(([number, label]) => (
+              <div key={label}><strong>{number}</strong><span>{label}</span></div>
+            ))}
           </div>
         </div>
 
         <div className="v2-portrait-board" aria-label="Adam visual identity board">
-          <div className="v2-coordinate">noise:{noise}</div>
+          <div className="v2-coordinate">build-noise:{String(noise).padStart(3, "0")}</div>
           <div className="v2-photo-wrap">
-            <img src={adamImage} alt="Adam Atieh" />
+            <img src={adamImage} alt="Adam Abo Atieh" />
             <div className="v2-scanline" />
           </div>
           <pre>{ascii}</pre>
-          <div className="v2-sticker v2-sticker-one">not generic</div>
-          <div className="v2-sticker v2-sticker-two">ship it but understand it</div>
-          <div className="v2-sticker v2-sticker-three">Lebanon / remote-ready</div>
+          <div className="v2-sticker v2-sticker-one">hireable / remote</div>
+          <div className="v2-sticker v2-sticker-two">security-aware builder</div>
+          <div className="v2-sticker v2-sticker-three">systems & automation</div>
         </div>
       </section>
 
@@ -147,9 +199,9 @@ const V2Portfolio = () => {
       <section id="signal" className="v2-signal-grid">
         <article className="v2-manifesto">
           <p className="v2-kicker">profile / decoded</p>
-          <h2>Less “polished junior dev.” More: systems kid with fingerprints on the machine.</h2>
+          <h2>Not just “junior dev.” A builder who keeps finding the system under the mess.</h2>
           <p>
-            I would position you as someone who can connect code to real operations: Discord communities, safety hardware, queue systems, authentication, dashboards, and business workflows. Your edge is not pretending to be a senior architect — it is showing that you can learn fast, build practically, and keep your work explainable.
+            The through-line is clear: Discord activity becomes an instructor workspace; helmet telemetry becomes a safety backend; venue waiting becomes QueueBuddy; auth becomes a full admin/client workflow; e-commerce becomes catalogue, cart, checkout, and admin operations. I like code that proves it can survive real workflows.
           </p>
         </article>
 
@@ -162,12 +214,12 @@ const V2Portfolio = () => {
 
       <section id="cases" className="v2-cases">
         <div className="v2-section-head">
-          <p className="v2-kicker">case files</p>
-          <h2>Projects should feel like evidence, not decoration.</h2>
+          <p className="v2-kicker">case files / real repositories</p>
+          <h2>Projects with a problem, a system, and proof.</h2>
         </div>
         <div className="v2-case-stack">
           {projects.map((project, index) => (
-            <article className="v2-case-card" key={project.title} style={{ "--tilt": `${index % 2 ? -1.4 : 1.2}deg` }}>
+            <article className="v2-case-card" key={project.title} style={{ "--tilt": `${index % 2 ? -1.1 : 1.05}deg` }}>
               <div className="v2-case-meta">
                 <span>{project.code}</span>
                 <span>{project.mood}</span>
@@ -175,6 +227,9 @@ const V2Portfolio = () => {
               <h3>{project.title}</h3>
               <p className="v2-role">{project.role}</p>
               <p>{project.note}</p>
+              <ul className="v2-proof-list">
+                {project.proof.map((item) => <li key={item}>{item}</li>)}
+              </ul>
               <div className="v2-tags">
                 {project.stack.map((tag) => <span key={tag}>{tag}</span>)}
               </div>
@@ -186,8 +241,8 @@ const V2Portfolio = () => {
 
       <section id="stack" className="v2-stack-room">
         <div className="v2-section-head">
-          <p className="v2-kicker">stack room</p>
-          <h2>Tools grouped by behavior, not by fake percentages.</h2>
+          <p className="v2-kicker">stack room / capability map</p>
+          <h2>Tools grouped by behavior, not fake percentages.</h2>
         </div>
         <div className="v2-capabilities">
           {capabilities.map(({ icon, label, text }) => (
@@ -201,33 +256,56 @@ const V2Portfolio = () => {
         <div className="v2-terminal-card">
           <div><TerminalSquare size={18} /> adam@machine:~/work</div>
           <code>
-            npm run build-practical-system<br />
+            git clone messy-reality<br />
             python validate_inputs.py --paranoid<br />
-            node automate_the_boring_part.js<br />
-            git commit -m "make the mess understandable"
+            npm run build-dashboard-that-explains<br />
+            uvicorn app.main:app --reload --trust-but-verify<br />
+            git commit -m "make the system understandable"
           </code>
+        </div>
+      </section>
+
+      <section id="timeline" className="v2-timeline">
+        <div className="v2-section-head">
+          <p className="v2-kicker">timeline / build trail</p>
+          <h2>The portfolio is now a map of how I build.</h2>
+        </div>
+        <div className="v2-timeline-grid">
+          {timeline.map(([num, title, text]) => (
+            <article key={num}>
+              <span>{num}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="v2-chaos-map" aria-label="visual work map">
         <div className="v2-node node-a"><Cpu size={20} /> backend</div>
-        <div className="v2-node node-b">UI that explains</div>
-        <div className="v2-node node-c">security basics</div>
-        <div className="v2-node node-d">AI reviewed by human</div>
-        <div className="v2-node node-e">business workflow</div>
+        <div className="v2-node node-b">dashboard</div>
+        <div className="v2-node node-c">security testing</div>
+        <div className="v2-node node-d">AI-assisted workflow</div>
+        <div className="v2-node node-e">business system</div>
+        <div className="v2-node node-f">real users</div>
         <svg viewBox="0 0 900 360" preserveAspectRatio="none" aria-hidden="true">
           <path d="M80 220 C200 40 340 310 470 150 S710 80 830 260" />
           <path d="M120 90 C280 260 360 40 520 210 S740 320 810 80" />
           <path d="M180 300 L720 55" />
+          <path d="M70 40 C250 130 610 120 850 50" />
         </svg>
       </section>
 
       <section id="contact" className="v2-contact">
         <p className="v2-kicker">final signal</p>
-        <h2>If this became the real V2, I’d keep it strange — then add real screenshots and demos.</h2>
+        <h2>If you need someone who can build the API, the UI, the workflow, and the weird glue between them — send the signal.</h2>
+        <p>
+          I’m open to full-stack, backend, automation, QA/security testing, and AI-assisted workflow roles. Best fit: teams that care about practical shipping, clean communication, and systems that make messy work easier to run.
+        </p>
         <div className="v2-contact-row">
           <a href="mailto:admatieh@gmail.com"><Mail size={18} /> admatieh@gmail.com</a>
           <a href="https://github.com/admatieh" target="_blank" rel="noreferrer"><Github size={18} /> github.com/admatieh</a>
+          <a href="https://www.linkedin.com/in/adam-abo-atyeh/" target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
           <span><MapPin size={18} /> Lebanon / Remote</span>
         </div>
       </section>
