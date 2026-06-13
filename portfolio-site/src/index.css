@@ -270,8 +270,54 @@ body {
 }
 
 .v2-sticker-one { left: -1rem; top: 3rem; transform: rotate(-10deg); }
-.v2-sticker-two { right: -1rem; top: 22rem; transform: rotate(7deg); background: var(--v2-blood); color: #fff; }
+.v2-sticker-two { right: .6rem; top: 22rem; transform: rotate(7deg); background: var(--v2-blood); color: #fff; }
 .v2-sticker-three { left: 42%; bottom: 7rem; transform: rotate(-4deg); background: var(--v2-lime); }
+.v2-sticker-four { right: 2.2rem; top: 7.8rem; transform: rotate(-3deg); background: #1d1b15; color: var(--v2-paper); border: 1px solid rgba(244,234,215,.24); }
+.v2-sticker-five { left: 2rem; top: 19rem; transform: rotate(5deg); background: #8ef3ff; color: #071015; }
+.v2-sticker-six { right: 6.2rem; bottom: 2.2rem; transform: rotate(6deg); background: #f6c177; color: #150d04; }
+
+.v2-orbit-card {
+  position: absolute;
+  z-index: 2;
+  width: 170px;
+  border: 1px solid rgba(244,234,215,.2);
+  border-radius: 1rem;
+  padding: .85rem;
+  background: rgba(10,9,7,.82);
+  color: var(--v2-paper);
+  box-shadow: 0 22px 60px rgba(0,0,0,.32);
+  backdrop-filter: blur(10px);
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+}
+
+.v2-orbit-card span {
+  color: var(--v2-lime);
+  font-size: .62rem;
+  letter-spacing: .18em;
+}
+
+.v2-orbit-card strong,
+.v2-orbit-card small {
+  display: block;
+}
+
+.v2-orbit-card strong {
+  margin-top: .35rem;
+  font-size: .84rem;
+  line-height: 1;
+}
+
+.v2-orbit-card small {
+  margin-top: .45rem;
+  color: rgba(244,234,215,.55);
+  font-size: .58rem;
+  line-height: 1.35;
+}
+
+.v2-orbit-card-one { left: 1.4rem; top: 11.4rem; transform: rotate(2deg); }
+.v2-orbit-card-two { right: 2.1rem; top: 14.2rem; transform: rotate(-4deg); }
+.v2-orbit-card-three { right: 2rem; bottom: 8.8rem; transform: rotate(3deg); }
 
 .v2-strip {
   position: relative;
@@ -665,6 +711,19 @@ body {
   .v2-sticker-one { left: .45rem; top: 2.45rem; }
   .v2-sticker-two { top: 17.2rem; right: .45rem; }
   .v2-sticker-three { left: .8rem; bottom: 5.4rem; }
+  .v2-sticker-four { right: .6rem; top: 6.25rem; }
+  .v2-sticker-five { left: .65rem; top: 13.8rem; }
+  .v2-sticker-six { right: .75rem; bottom: 1rem; }
+  .v2-orbit-card {
+    width: 122px;
+    padding: .55rem;
+    border-radius: .78rem;
+  }
+  .v2-orbit-card strong { font-size: .64rem; }
+  .v2-orbit-card small { display: none; }
+  .v2-orbit-card-one { left: .75rem; top: 9.2rem; }
+  .v2-orbit-card-two { right: .8rem; top: 11.6rem; }
+  .v2-orbit-card-three { display: none; }
   .v2-strip { padding: .7rem 0; }
   .v2-strip-track { gap: .5rem; padding-inline: .5rem; }
   .v2-strip span {

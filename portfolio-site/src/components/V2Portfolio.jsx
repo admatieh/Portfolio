@@ -209,6 +209,24 @@ const V2Portfolio = () => {
           <div className="v2-sticker v2-sticker-one">hireable / remote</div>
           <div className="v2-sticker v2-sticker-two">security-aware builder</div>
           <div className="v2-sticker v2-sticker-three">systems & automation</div>
+          <div className="v2-sticker v2-sticker-four">backend / APIs</div>
+          <div className="v2-sticker v2-sticker-five">React UI</div>
+          <div className="v2-sticker v2-sticker-six">Python scripts</div>
+          <div className="v2-orbit-card v2-orbit-card-one">
+            <span>01</span>
+            <strong>FULL-STACK</strong>
+            <small>frontend → backend → data</small>
+          </div>
+          <div className="v2-orbit-card v2-orbit-card-two">
+            <span>02</span>
+            <strong>BUILD MODE</strong>
+            <small>ship, test, repeat</small>
+          </div>
+          <div className="v2-orbit-card v2-orbit-card-three">
+            <span>03</span>
+            <strong>AI + HUMAN REVIEW</strong>
+            <small>faster work, safer judgment</small>
+          </div>
         </div>
       </section>
 
