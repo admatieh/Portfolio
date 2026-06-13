@@ -213,9 +213,11 @@ const V2Portfolio = () => {
       </section>
 
       <section className="v2-strip" aria-label="identity fragments">
-        {fragments.map((fragment) => (
-          <span key={fragment}>{fragment}</span>
-        ))}
+        <div className="v2-strip-track">
+          {[...fragments, ...fragments].map((fragment, index) => (
+            <span key={`${fragment}-${index}`}>{fragment}</span>
+          ))}
+        </div>
       </section>
 
       <section className="v2-recruiter-read" aria-label="Recruiter quick read">
