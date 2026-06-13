@@ -5,6 +5,7 @@ import {
   Braces,
   Cpu,
   Database,
+  FileText,
   Github,
   Linkedin,
   Mail,
@@ -15,6 +16,7 @@ import {
   Zap,
 } from "lucide-react";
 import adamImage from "../assets/final.png";
+import resumePdf from "../assets/Adam-Atieh-CV.pdf";
 
 const fragments = [
   "Lebanon / remote-ready",
@@ -31,14 +33,23 @@ const fragments = [
 
 const stats = [
   ["28", "public GitHub repositories"],
-  ["2023", "GitHub build trail started"],
-  ["4", "core lanes: backend, UI, automation, security"],
-  ["∞", "curiosity for useful systems"],
+  ["6", "featured proof projects"],
+  ["4", "target lanes: backend, full-stack, automation, QA/security"],
+  ["Remote", "Lebanon-based and available"],
+];
+
+const quickRead = [
+  ["Target roles", "Full-stack, backend, automation, QA/security testing"],
+  ["Core stack", "React, TypeScript, Node/Express, Python, FastAPI, Django, MongoDB, SQLite"],
+  ["Best proof", "Discord instructor workspace, Smart Helmet telemetry backend, QueueBuddy, auth systems"],
+  ["Work style", "Practical shipping, clear communication, AI-assisted research with human review"],
 ];
 
 const projects = [
   {
     code: "CASE_01",
+    category: "Featured / full-stack automation",
+    featured: "Best product-system proof",
     title: "Discord Activity Intelligence Bot",
     role: "Full-stack bot system / instructor workspace / analytics",
     note: "Turns live Discord voice sessions into attendance records, reports, scheduled announcements, participant reviews, and a Next.js dashboard instead of raw command chaos.",
@@ -49,6 +60,8 @@ const projects = [
   },
   {
     code: "CASE_02",
+    category: "Featured / backend + real-time",
+    featured: "Best backend proof",
     title: "Smart Helmet Backend",
     role: "Real-time telemetry / risk pipeline / safety backend",
     note: "A FastAPI service that ingests GPS, IMU, heart-rate, and speed streams, writes them through a background queue worker, and broadcasts computed risk status to dashboards in real time.",
@@ -59,6 +72,8 @@ const projects = [
   },
   {
     code: "CASE_03",
+    category: "Auth / admin workflow",
+    featured: "Best security-aware flow",
     title: "FastAPI Authentication System",
     role: "Auth architecture / protected routes / admin workflow",
     note: "A full-stack authentication project with JWT login, role-based access, admin approval flows, user management, password changes, and a responsive React dashboard.",
@@ -69,6 +84,8 @@ const projects = [
   },
   {
     code: "CASE_04",
+    category: "Product UX / MERN",
+    featured: "Best operations app",
     title: "QueueBuddy",
     role: "Full-stack venue flow / queue logic / service UX",
     note: "A real-time queue and seat-management platform for making waiting less chaotic, giving staff clearer decisions, and turning venue flow into a visible system.",
@@ -79,6 +96,8 @@ const projects = [
   },
   {
     code: "CASE_05",
+    category: "Commerce / Django REST",
+    featured: "Best traditional full-stack",
     title: "Velora E-Commerce Platform",
     role: "Django REST / storefront / admin operations",
     note: "A production-style e-commerce build with product variants, persistent cart, JWT authentication, email verification, checkout logic, and an admin dashboard for store operations.",
@@ -89,6 +108,8 @@ const projects = [
   },
   {
     code: "CASE_06",
+    category: "QA / security / scripts",
+    featured: "Best automation habits",
     title: "Security + Automation Lab",
     role: "Python scripts / QA practice / security habits",
     note: "A collection of small practical tools: Selenium playground examples, password leak checking, password validation, scraping, image conversion, and experiments that show repetition becoming scripts.",
@@ -169,6 +190,7 @@ const V2Portfolio = () => {
             <a href="#cases">view real case files <ArrowUpRight size={16} /></a>
             <a href="mailto:admatieh@gmail.com">contact me <Mail size={16} /></a>
             <a href="https://www.linkedin.com/in/adam-abo-atyeh/" target="_blank" rel="noreferrer">LinkedIn <Linkedin size={16} /></a>
+            <a href={resumePdf} target="_blank" rel="noreferrer">CV / resume <FileText size={16} /></a>
           </div>
           <div className="v2-hero-proof" aria-label="quick facts">
             {stats.map(([number, label]) => (
@@ -194,6 +216,21 @@ const V2Portfolio = () => {
         {fragments.map((fragment) => (
           <span key={fragment}>{fragment}</span>
         ))}
+      </section>
+
+      <section className="v2-recruiter-read" aria-label="Recruiter quick read">
+        <div>
+          <p className="v2-kicker">recruiter quick read</p>
+          <h2>Open the page, understand the fit in ten seconds.</h2>
+        </div>
+        <div className="v2-read-grid">
+          {quickRead.map(([label, value]) => (
+            <article key={label}>
+              <span>{label}</span>
+              <p>{value}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="signal" className="v2-signal-grid">
@@ -222,18 +259,29 @@ const V2Portfolio = () => {
             <article className="v2-case-card" key={project.title} style={{ "--tilt": `${index % 2 ? -1.1 : 1.05}deg` }}>
               <div className="v2-case-meta">
                 <span>{project.code}</span>
-                <span>{project.mood}</span>
+                <span>{project.category}</span>
               </div>
+              <div className="v2-mini-preview" aria-hidden="true">
+                <span>{project.featured}</span>
+                <i />
+                <i />
+                <i />
+              </div>
+              <span className="v2-featured-pill">{project.featured}</span>
               <h3>{project.title}</h3>
               <p className="v2-role">{project.role}</p>
               <p>{project.note}</p>
+              <p className="v2-impact-line">Impact: {project.mood}; replaces a loose/manual workflow with a clearer working system.</p>
               <ul className="v2-proof-list">
                 {project.proof.map((item) => <li key={item}>{item}</li>)}
               </ul>
               <div className="v2-tags">
                 {project.stack.map((tag) => <span key={tag}>{tag}</span>)}
               </div>
-              <a href={project.link} target="_blank" rel="noreferrer">view source <Github size={15} /></a>
+              <div className="v2-card-actions">
+                <a href={project.link} target="_blank" rel="noreferrer">source <Github size={15} /></a>
+                <a href={`mailto:admatieh@gmail.com?subject=Project walkthrough: ${project.title}`}>walkthrough <Mail size={15} /></a>
+              </div>
             </article>
           ))}
         </div>
@@ -306,6 +354,7 @@ const V2Portfolio = () => {
           <a href="mailto:admatieh@gmail.com"><Mail size={18} /> admatieh@gmail.com</a>
           <a href="https://github.com/admatieh" target="_blank" rel="noreferrer"><Github size={18} /> github.com/admatieh</a>
           <a href="https://www.linkedin.com/in/adam-abo-atyeh/" target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
+          <a href={resumePdf} target="_blank" rel="noreferrer"><FileText size={18} /> CV / Resume</a>
           <span><MapPin size={18} /> Lebanon / Remote</span>
         </div>
       </section>
